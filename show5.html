@@ -1,0 +1,143 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">  
+        <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+        <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <title>成绩排名</title>
+        <style>
+            body{
+                background: url(./img/dff.jpg);
+                background-size: cover;
+            }
+            .box{
+                box-sizing: border-box;
+                width: 100%;
+                height: 100%;
+                padding: 100px;
+                position: absolute;
+                top: 0%;
+                left: 0%;
+                background-color: rgba(200, 200, 200, .7);
+                display: none;
+            }
+            .panel-footer{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .container{
+                opacity: 0.8;
+            }
+        </style>
+
+    </head>
+    <body>
+        <div class="container" style="margin-top: 30px;">
+            <div class="panel panel-primary">
+                 <div class="panel-heading">
+                     <h2>学生成绩管理系统-成绩排名</h2>
+                 </div>
+                 <div class="panel-body" style = "margin-top: 20px; margin-bottom: 20px;">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th style="text-align: center;"><a style="color: inherit;" href="./show.html">成绩查询</a></th>
+                                <th style="text-align: center;"><a style="color: inherit;" href="./show2.html">信息管理</a></th>
+                                <th style="text-align: center;"><a style="color: inherit;" href="./show3.html">课程管理</a></th>
+                                <th style="text-align: center;"><a style="color: inherit;" href="./show4.html">成绩统计</a></th>
+                                <th style="text-align: center;"><a style="color: inherit;" href="./show5.html">成绩排名</a></th>
+                                <th style="text-align: center;"><a style="color: inherit;" href="./show6.html">选课查询</a></th>
+                            </tr>
+                        </thead>
+                    </table>
+                    <button type="button" class="btn btn-success select">获取排名信息</button>
+                     <table class="table table-hover">
+                         <thead>
+                             <tr>
+                                 <th style="text-align: center;">排名</th>
+                                 <th style="text-align: center;">专业</th>
+                                 <th style="text-align: center;">学号</th>
+                                 <th style="text-align: center;">姓名</th>
+                                 <th style="text-align: center;">课程号</th>
+                                 <th style="text-align: center;">课程名</th>
+                                 <th style="text-align: center;">成绩</th>
+                             </tr>
+                         </thead>
+                         <tbody id="tb"> </tbody>
+                     </table>
+                 </div>
+                 <div class='panel-footer'>
+                    <nav aria-label="...">
+                        <ul class="pager">
+                          <li class="previous disabled"><a href="#"><span aria-hidden="true">&larr;</span> 上一页</a></li>
+                        </ul>
+                    </nav>
+                    <nav aria-label="Page navigation">
+                        <ul class="pagination">
+                          <li class = 'active'><a href="#">1</a></li>
+                          <li><a href="#">2</a></li>
+                          <li><a href="#">3</a></li>
+                          <li><a href="#">4</a></li>
+                          <li><a href="#">5</a></li>
+                        </ul>
+                    </nav>
+                    <nav aria-label="...">
+                        <ul class="pager">  
+                          <li class="next"><a href="#">下一页 <span aria-hidden="true">&rarr;</span></a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+
+    </body>
+    <script type="module">
+        import {post} from "./ajax.js";
+        var oBtain = document.querySelector(".select");
+        var oAdd = document.querySelector(".add")
+        var oTb = document.querySelector("#tb");
+        var oBox = document.querySelector(".box");
+        var oCancel =document.querySelector(".cancel");
+        var oSubmit = document.getElementById("submit");
+
+        //展示信息
+        function show(){
+            post({
+                url:"./count/rank.php",
+            success:function(result){
+                var arr = JSON.parse(result);
+                console.log(arr);
+                var str = '';
+                var rank = 1;
+                for(var i = 0;i<arr.length;i++){
+                    str +=`<tr>
+                        <td style="text-align: center;">${rank++}</td>
+                        <td style="text-align: center;">${arr[i].Sdept}</td>
+                        <td style="text-align: center;">${arr[i].Sno}</td>
+                        <td style="text-align: center;">${arr[i].Sname}</td>
+                        <td style="text-align: center;">${arr[i].Cno}</td>
+                        <td style="text-align: center;">${arr[i].Cname}</td>
+                        <td style="text-align: center;">${arr[i].Grade}</td>
+                        </tr>`
+                    if(i != arr.length-1){
+                        if(arr[i+1].Cno != arr[i].Cno){
+                            rank=1;
+                        }
+                    }
+                }
+                oTb.innerHTML=str;
+            },
+            error:function(error){
+                console.log(error)
+            }
+        })
+        }
+        oBtain.onclick = function(){
+           show()
+        }
+    </script>
+    </html>
