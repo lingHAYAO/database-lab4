@@ -1,0 +1,66 @@
+Date : 2023-12-18 19:03:18
+Directory : c:\Users\29032\Desktop\daershang\database
+Total : 31 files,  1997 codes, 55 comments, 175 blanks, all 2227 lines
+
+Languages
++------------+------------+------------+------------+------------+------------+
+| language   | files      | code       | comment    | blank      | total      |
++------------+------------+------------+------------+------------+------------+
+| HTML       |          8 |      1,388 |          1 |         65 |      1,454 |
+| PHP        |         21 |        527 |         53 |        100 |        680 |
+| JavaScript |          1 |         80 |          1 |          9 |         90 |
+| Markdown   |          1 |          2 |          0 |          1 |          3 |
++------------+------------+------------+------------+------------+------------+
+
+Directories
++-------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                              | files      | code       | comment    | blank      | total      |
++-------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                 |         31 |      1,997 |         55 |        175 |      2,227 |
+| . (Files)                                                         |         11 |      1,508 |          3 |         78 |      1,589 |
+| count                                                             |          2 |         52 |         10 |         14 |         76 |
+| course                                                            |          5 |        104 |          5 |         18 |        127 |
+| grade                                                             |          5 |        104 |          5 |         17 |        126 |
+| login                                                             |          1 |         41 |         13 |         11 |         65 |
+| register                                                          |          1 |         57 |          9 |         13 |         79 |
+| selection                                                         |          1 |         25 |          5 |          6 |         36 |
+| student                                                           |          5 |        106 |          5 |         18 |        129 |
++-------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++-------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| filename                                                          | language   | code       | comment    | blank      | total      |
++-------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| c:\Users\29032\Desktop\daershang\database\README.md               | Markdown   |          2 |          0 |          1 |          3 |
+| c:\Users\29032\Desktop\daershang\database\ajax.js                 | JavaScript |         80 |          1 |          9 |         90 |
+| c:\Users\29032\Desktop\daershang\database\count\rank.php          | PHP        |         25 |          5 |          7 |         37 |
+| c:\Users\29032\Desktop\daershang\database\count\show.php          | PHP        |         27 |          5 |          7 |         39 |
+| c:\Users\29032\Desktop\daershang\database\course\delete.php       | PHP        |         19 |          0 |          1 |         20 |
+| c:\Users\29032\Desktop\daershang\database\course\insert.php       | PHP        |         22 |          0 |          4 |         26 |
+| c:\Users\29032\Desktop\daershang\database\course\show.php         | PHP        |         22 |          5 |          7 |         34 |
+| c:\Users\29032\Desktop\daershang\database\course\update.php       | PHP        |         19 |          0 |          3 |         22 |
+| c:\Users\29032\Desktop\daershang\database\course\update1.php      | PHP        |         22 |          0 |          3 |         25 |
+| c:\Users\29032\Desktop\daershang\database\grade\delete_grade.php  | PHP        |         20 |          0 |          1 |         21 |
+| c:\Users\29032\Desktop\daershang\database\grade\insert.php        | PHP        |         21 |          0 |          3 |         24 |
+| c:\Users\29032\Desktop\daershang\database\grade\show.php          | PHP        |         22 |          5 |          7 |         34 |
+| c:\Users\29032\Desktop\daershang\database\grade\update_grade.php  | PHP        |         20 |          0 |          3 |         23 |
+| c:\Users\29032\Desktop\daershang\database\grade\update_grade1.php | PHP        |         21 |          0 |          3 |         24 |
+| c:\Users\29032\Desktop\daershang\database\login.html              | HTML       |         99 |          0 |         11 |        110 |
+| c:\Users\29032\Desktop\daershang\database\login\login.php         | PHP        |         41 |         13 |         11 |         65 |
+| c:\Users\29032\Desktop\daershang\database\paging.php              | PHP        |         38 |          1 |          3 |         42 |
+| c:\Users\29032\Desktop\daershang\database\register.html           | HTML       |        108 |          1 |          9 |        118 |
+| c:\Users\29032\Desktop\daershang\database\register\register.php   | PHP        |         57 |          9 |         13 |         79 |
+| c:\Users\29032\Desktop\daershang\database\selection\show.php      | PHP        |         25 |          5 |          6 |         36 |
+| c:\Users\29032\Desktop\daershang\database\show.html               | HTML       |        238 |          0 |          9 |        247 |
+| c:\Users\29032\Desktop\daershang\database\show2.html              | HTML       |        252 |          0 |         10 |        262 |
+| c:\Users\29032\Desktop\daershang\database\show3.html              | HTML       |        243 |          0 |         10 |        253 |
+| c:\Users\29032\Desktop\daershang\database\show4.html              | HTML       |        134 |          0 |          4 |        138 |
+| c:\Users\29032\Desktop\daershang\database\show5.html              | HTML       |        140 |          0 |          4 |        144 |
+| c:\Users\29032\Desktop\daershang\database\show6.html              | HTML       |        174 |          0 |          8 |        182 |
+| c:\Users\29032\Desktop\daershang\database\student\delete.php      | PHP        |         19 |          0 |          1 |         20 |
+| c:\Users\29032\Desktop\daershang\database\student\insert.php      | PHP        |         23 |          0 |          4 |         27 |
+| c:\Users\29032\Desktop\daershang\database\student\show.php        | PHP        |         22 |          5 |          7 |         34 |
+| c:\Users\29032\Desktop\daershang\database\student\update.php      | PHP        |         19 |          0 |          3 |         22 |
+| c:\Users\29032\Desktop\daershang\database\student\update1.php     | PHP        |         23 |          0 |          3 |         26 |
+| Total                                                             |            |      1,997 |         55 |        175 |      2,227 |
++-------------------------------------------------------------------+------------+------------+------------+------------+------------+

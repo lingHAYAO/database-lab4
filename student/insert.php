@@ -14,7 +14,7 @@ if(!$link){
 };
 mysqli_set_charset($link,"utf8");
 mysqli_select_db($link,"成绩_u202211923");
-$sql ="insert into student (Sno,Sname,Ssex,Sage,Sdept) values('{$Sno}','{$Sname}',{$Ssex},{$Sage},{$Sdept})";
+$sql ="insert into student values('{$Sno}','{$Sname}','{$Ssex}',{$Sage},'{$Sdept}')";
 $res = mysqli_query($link,$sql);
 if($res){
     echo "success";

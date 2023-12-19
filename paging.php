@@ -6,14 +6,14 @@ $count = 0; //总条数
 $pages = 0; //总页数
 $skip = 0; //跳过的条数
 
-$link=mysqli_connect("localhost","root","root");
+$link=mysqli_connect("localhost","root","admin123456");
 if(!$link){
     echo "服务器忙，请重试";
     exit;
 }
 mysqli_set_charset($link,"utf8");
-mysqli_select_db($link,"nz");
-$sql = "SELECT COUNT(*) FROM students";
+mysqli_select_db($link,"成绩_u202211923");
+$sql = "SELECT COUNT(*) FROM student";
 $res=mysqli_query($link,$sql);
 $row = mysqli_fetch_assoc($res);
 $count = $row['COUNT(*)'];
@@ -30,7 +30,7 @@ $msg =array(
     "skip" => $skip,
     "userlist" => array()
 );
-$sql2 = "SELECT * FROM students LIMIT {$skip}, {$limit}";
+$sql2 = "SELECT * FROM student LIMIT {$skip}, {$limit}";
 $res2 = mysqli_query($link, $sql2);
 while($row2 = mysqli_fetch_assoc($res2)){
     array_push($msg['userlist'], $row2);

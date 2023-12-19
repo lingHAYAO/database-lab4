@@ -12,7 +12,8 @@
                 
             }
             body{
-                background: url(./1.png) no-repeat 100% 100%;
+                background: url(./img/dff.jpg);
+                background-size: cover;
             }
             body .container{
                 width: 100%;
@@ -71,9 +72,9 @@
             var aInputs = document.querySelectorAll(".panel-body input");
             var aAlert = document.querySelector(".alert");
 
-            oBtn.onclick = download;
             
-            function download(){
+            
+            oBtn.onclick = function(){
                 $post({
                     url: "./login/login.php",
                     data: {
@@ -83,18 +84,14 @@
                     success: function(result){
                         console.log(result);
                         var obj = JSON.parse(result);
-                        aAlert.style.display = 'block';
                         if(obj.code){
                             //错误
+                            aAlert.style.display = 'block';
                             aAlert.className = 'alert alert-danger';
                             aAlert.innerHTML = obj.msg;
-
                         }else{
-                            aAlert.className = 'alert alert-success';
                             //成功
                             window.open("./show.html");
-                            aAlert.innerHTML = obj.msg;
-                            
                         }
                     },
                     error: function(msg){
